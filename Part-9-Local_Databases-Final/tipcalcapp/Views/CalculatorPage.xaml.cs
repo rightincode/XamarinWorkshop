@@ -33,7 +33,7 @@ namespace tipcalcapp.Views
             swtRounded.Toggled += OnSwtRoundedToggled;
             sldTipCalc.ValueChanged += OnSldTipCalcValueChanged;
             stpNumberOfPersons.ValueChanged += OnStpNumberOfPersonsValueChanged;
-            //btnSaveTipTransaction.Clicked += OnBtnSaveTipTransactionClicked;
+            btnSaveTipTransaction.Clicked += OnBtnSaveTipTransactionClicked;
         }
 
         private void OnTipPercentPresetSelectedIndexChanged(Object sender, EventArgs e)

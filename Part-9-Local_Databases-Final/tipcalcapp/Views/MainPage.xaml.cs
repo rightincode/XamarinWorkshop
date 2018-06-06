@@ -39,10 +39,10 @@ namespace tipcalcapp.Views
                     page = (Page)Activator.CreateInstance(item.TargetType);                    
                     break;
 
-                //case 2:
-                //    item.TargetType = typeof(TipHistoryPage);
-                //    page = (Page)Activator.CreateInstance(item.TargetType);
-                //    break;
+                case 2:
+                    item.TargetType = typeof(TipHistoryPage);
+                    page = (Page)Activator.CreateInstance(item.TargetType);
+                    break;
 
                 //case 3:
                 //    item.TargetType = typeof(LoginPage);

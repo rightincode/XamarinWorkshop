@@ -15,7 +15,7 @@ namespace tipcalc
 {
     public partial class App : Application
     {
-        //private readonly IFileHelper _fileHelper = DependencyService.Get<IFileHelper>();
+        private readonly IFileHelper _fileHelper = DependencyService.Get<IFileHelper>();
 
         public IServiceProvider ServiceProvider { get; private set; }
 
@@ -54,7 +54,7 @@ namespace tipcalc
             var services = new ServiceCollection();
             services.AddTransient<ITipCalculator, TipCalculator>();
             services.AddTransient<ITipCalcTransaction, TipCalcTransaction>();
-            //services.AddTransient<ITipDatabase>(s => new TipDatabase(_fileHelper));
+            services.AddTransient<ITipDatabase>(s => new TipDatabase(_fileHelper));
             ServiceProvider = services.BuildServiceProvider();
         }
     }

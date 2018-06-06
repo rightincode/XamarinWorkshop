@@ -14,7 +14,7 @@ namespace tipcalcapp.ViewModels
             {
                     new MainPageMenuItem { Id = 0, Title = "Home", Image = "baseline_home_black_18dp.png", IsEnabled = true },
                     new MainPageMenuItem { Id = 1, Title = "Tip Calculator", Image = "baseline_payment_black_18dp.png", IsEnabled = true },
-                    //new MainPageMenuItem { Id = 2, Title = "Tip History", Image = "baseline_list_black_18dp.png", IsEnabled = true },
+                    new MainPageMenuItem { Id = 2, Title = "Tip History", Image = "baseline_list_black_18dp.png", IsEnabled = true },
             });
 
             //if (LoggedIn)
