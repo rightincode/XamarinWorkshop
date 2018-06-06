@@ -7,6 +7,7 @@ The objective of this workshop is to teach you how to use Xamarin and Xamarin Fo
 * Creating a Clean Architecture
 * Navigation
 * Behaviors
+* Effects
 
 
 
