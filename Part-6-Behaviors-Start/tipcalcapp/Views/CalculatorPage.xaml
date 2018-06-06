@@ -27,7 +27,7 @@
                        Keyboard="Numeric" 
                        Text="{Binding TipTxt, Mode=TwoWay}">
                     <!--<Entry.Behaviors>
-                        <localBehaviors:UnusualTipBehavior />
+                        <localBehaviors:NoTipBehavior />
                     </Entry.Behaviors>-->
                 </Entry>
             </StackLayout>            

@@ -2,7 +2,7 @@
 
 namespace tipcalcapp.Behaviors
 {
-    public class UnusualTipBehavior : Behavior<Entry>
+    public class NoTipBehavior : Behavior<Entry>
     {
         protected override void OnAttachedTo(Entry entry)
         {
@@ -20,7 +20,7 @@ namespace tipcalcapp.Behaviors
         {
             bool isValid = double.TryParse(args.NewTextValue, out double result);
 
-            if ((isValid) && ((result < 15) || (result > 22)))
+            if ((isValid) && (result <= 0))
             {
                 ((Entry)sender).TextColor = Color.Red;
             }
