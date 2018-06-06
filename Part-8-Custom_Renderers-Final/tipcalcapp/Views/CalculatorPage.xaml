@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localBehaviors="clr-namespace:tipcalcapp.Behaviors"
+             x:Class="tipcalcapp.Views.CalculatorPage">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20">
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTotal" 
+                       Text="Total: " 
+                       WidthRequest="100" 
+                       FontSize="Medium" 
+                       HorizontalTextAlignment="End" 
+                       VerticalTextAlignment="Center"></Label>
+                <Entry x:Name="txtTotal" WidthRequest="100" Keyboard="Numeric" Text="{Binding TotalTxt, Mode=TwoWay}"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTipAmount" 
+                       Text="Tip: " 
+                       WidthRequest="100"
+                       FontSize="Medium" 
+                       HorizontalTextAlignment="End" 
+                       VerticalTextAlignment="Center"></Label>
+                <Entry x:Name="txtTipAmount" 
+                       WidthRequest="100" 
+                       Keyboard="Numeric" 
+                       Text="{Binding TipTxt, Mode=TwoWay}">
+                    <Entry.Behaviors>
+                        <localBehaviors:NoTipBehavior />
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>            
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTipPercent" 
+                       Text="Tip %: " 
+                       WidthRequest="100"
+                       FontSize="Medium" 
+                       HorizontalTextAlignment="End" 
+                       VerticalTextAlignment="Center"></Label>
+                <Label x:Name="txtTipPercent" 
+                       Text="{Binding TipPercentTxt, Mode=OneWay}"
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"></Label>
+                <Picker x:Name="tipPercentPreset"
+                        Title="Select a Tip%"
+                        ItemsSource="{Binding TipPresets}"
+                        ItemDisplayBinding="{Binding TipPercentageTxt}"
+                        WidthRequest="135"
+                        FontSize="Medium"></Picker>
+            </StackLayout>
+            <Slider x:Name="sldTipCalc"
+                    Minimum="0"
+                    Maximum="100"
+                    Value="{Binding TipPercent, Mode=TwoWay}"></Slider>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblGrandTotal" 
+                       Text="Grand Total: " 
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="End"></Label>
+                <Label x:Name="txtGrandTotal" 
+                       Text="{Binding GrandTotalTxt, Mode=OneWay}"
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"></Label>
+                <Label x:Name="txtRounded" 
+                       Text="Round: "
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="End"></Label>
+                <Switch x:Name="swtRounded"></Switch>                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblNumberOfPersons" 
+                       Text="# of Persons: " 
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"></Label>
+                <Label x:Name="lblNumberOfPersonsCount" 
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"
+                       Text="{Binding NumberOfPersons, Mode=OneWay}"></Label>
+                <Stepper x:Name="stpNumberOfPersons"                         
+                         Minimum="1"
+                         Maximum="20"
+                         Increment="1"
+                         Value="{Binding NumberOfPersons, Mode=TwoWay}"></Stepper>                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTotalPerPerson" 
+                       Text="Total Per Person: " 
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"></Label>
+                <Label x:Name="txtTotalPerPerson" 
+                       Text="{Binding TotalPerPersonTxt, Mode=OneWay}"
+                       WidthRequest="100"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"></Label>                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <!--<Button x:Name="btnSaveTipTransaction"
+                        Text="Save"
+                        WidthRequest="100"
+                        FontSize="Medium"
+                        VerticalOptions="Center"></Button>-->
+                <Button x:Name="btnResetTipCalculator"
+                        Text="Reset"
+                        WidthRequest="100"
+                        FontSize="Medium"
+                        VerticalOptions="Center"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
