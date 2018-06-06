@@ -6,6 +6,7 @@ The objective of this workshop is to teach you how to use Xamarin and Xamarin Fo
 * Using Xamarin Forms to Create Cross Platform User Interfaces
 * Creating a Clean Architecture
 * Navigation
+* Behaviors
 
 
 
