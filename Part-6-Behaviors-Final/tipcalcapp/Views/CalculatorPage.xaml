@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localBehaviors="clr-namespace:tipcalcapp.Behaviors"
              x:Class="tipcalcapp.Views.CalculatorPage">
 
     <ContentPage.Content>
@@ -21,7 +22,14 @@
                        FontSize="Medium" 
                        HorizontalTextAlignment="End" 
                        VerticalTextAlignment="Center"></Label>
-                <Entry x:Name="txtTipAmount" WidthRequest="100" Keyboard="Numeric" Text="{Binding TipTxt, Mode=TwoWay}"></Entry>
+                <Entry x:Name="txtTipAmount" 
+                       WidthRequest="100" 
+                       Keyboard="Numeric" 
+                       Text="{Binding TipTxt, Mode=TwoWay}">
+                    <Entry.Behaviors>
+                        <localBehaviors:UnusualTipBehavior />
+                    </Entry.Behaviors>
+                </Entry>
             </StackLayout>            
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblTipPercent" 
