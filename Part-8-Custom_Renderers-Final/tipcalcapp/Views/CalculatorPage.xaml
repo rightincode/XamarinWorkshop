@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:localBehaviors="clr-namespace:tipcalcapp.Behaviors"
+             xmlns:localCustomRenderers="clr-namespace:tipcalcapp.CustomRenderers"
              x:Class="tipcalcapp.Views.CalculatorPage">
 
     <ContentPage.Content>
@@ -13,7 +14,15 @@
                        FontSize="Medium" 
                        HorizontalTextAlignment="End" 
                        VerticalTextAlignment="Center"></Label>
-                <Entry x:Name="txtTotal" WidthRequest="100" Keyboard="Numeric" Text="{Binding TotalTxt, Mode=TwoWay}"></Entry>
+                <!--<Entry x:Name="txtTotal" 
+                       WidthRequest="100" 
+                       Keyboard="Numeric" 
+                       Text="{Binding TotalTxt, Mode=TwoWay}"></Entry>-->
+                <localCustomRenderers:BetterEntry x:Name="txtTotal" 
+                       WidthRequest="100" 
+                       Keyboard="Numeric" 
+                       Text="{Binding TotalTxt, Mode=TwoWay}">                    
+                </localCustomRenderers:BetterEntry>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblTipAmount" 
