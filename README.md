@@ -9,6 +9,7 @@ The objective of this workshop is to teach you how to use Xamarin and Xamarin Fo
 * Behaviors
 * Effects
 * Custom Renderers
+* Local Databases
 
 
 

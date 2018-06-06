@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tipcalcapp.Views.TipHistoryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="TipTransactionListView"
+                      ItemsSource="{Binding TipCalcTransactions}"
+                      RowHeight="140">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="15,10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Date: " 
+                                           FontSize="Small" 
+                                           FontAttributes="Bold"
+                                           WidthRequest="100"
+                                           HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding Saved, StringFormat='{0:d}'}" 
+                                           FontSize="Small"
+                                           WidthRequest="75"
+                                           HorizontalTextAlignment="End"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Amount: " 
+                                           FontSize="Small" 
+                                           FontAttributes="Bold"
+                                           WidthRequest="100"
+                                           HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding Total, StringFormat='{0:c}'}" 
+                                           FontSize="Small"
+                                           WidthRequest="75"
+                                           HorizontalTextAlignment="End"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Tip: " 
+                                           FontSize="Small" 
+                                           FontAttributes="Bold"
+                                           WidthRequest="100"
+                                           HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding Tip, StringFormat='{0:c}'}" 
+                                           FontSize="Small"
+                                           WidthRequest="75"
+                                           HorizontalTextAlignment="End"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Total Payment: " 
+                                           FontSize="Small" 
+                                           FontAttributes="Bold"
+                                           WidthRequest="100"
+                                           HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding GrandTotal, StringFormat='{0:c}'}" 
+                                           FontSize="Small"
+                                           WidthRequest="75"
+                                           HorizontalTextAlignment="End"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Tip %: " 
+                                           FontSize="Small" 
+                                           FontAttributes="Bold"
+                                           WidthRequest="100"
+                                           HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding TipPercent, StringFormat='{0:f2}'}" 
+                                           FontSize="Small"
+                                           WidthRequest="75"
+                                           HorizontalTextAlignment="End"></Label>
+                                </StackLayout>                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
