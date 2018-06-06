@@ -282,7 +282,7 @@ namespace tipcalcapp.tests
         }
 
         [TestMethod]
-        public async Task SaveTipTransaction_ValidTip_PositiveTipTransactionId()
+        public async Task SaveTipTransaction_ValidTip_PositiveTipTransactionIdAsync()
         {
             var myCalculatorViewModel = new CalculatorPageViewModel(myCalculator, myTipCalcTransaction, myTipDatabase)
             {
@@ -290,13 +290,13 @@ namespace tipcalcapp.tests
                 TipPercent = 10,
             };
 
-            int result = await myCalculatorViewModel.SaveTipTransaction();
+            int result = await myCalculatorViewModel.SaveTipTransactionAsync();
 
             Assert.IsTrue(result > 0);
         }
 
         [TestMethod]
-        public async Task SaveTipTransaction_ValidTip_CalculatorAndTransactionValuesMatch()
+        public async Task SaveTipTransaction_ValidTip_CalculatorAndTransactionValuesMatchAsync()
         {
             var myCalculatorViewModel = new CalculatorPageViewModel(myCalculator, myTipCalcTransaction, myTipDatabase)
             {
@@ -304,7 +304,7 @@ namespace tipcalcapp.tests
                 TipPercent = 10,
             };
 
-            int result = await myCalculatorViewModel.SaveTipTransaction();
+            int result = await myCalculatorViewModel.SaveTipTransactionAsync();
 
             Assert.AreEqual(myCalculator.GrandTotal, myTipCalcTransaction.GrandTotal);
             Assert.AreEqual(myCalculator.NumberOfPersons, myTipCalcTransaction.NumOfPersons);

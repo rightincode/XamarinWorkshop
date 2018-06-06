@@ -91,7 +91,7 @@ namespace tipcalcapp.Views
 
         private async void OnBtnSaveTipTransactionClicked(object sender, EventArgs e)
         {
-            int result = await VM.SaveTipTransaction();
+            int result = await VM.SaveTipTransactionAsync();
             if (result> 0)
             {
                 VM.ResetCalculator();

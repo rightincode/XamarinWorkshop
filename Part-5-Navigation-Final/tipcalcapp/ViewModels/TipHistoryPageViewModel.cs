@@ -21,7 +21,7 @@ namespace tipcalcapp.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public async Task LoadTipHistory()
+        public async Task LoadTipHistoryAsync()
         {
             TipCalcTransactions = new ObservableCollection<ITipCalcTransaction>(await _tipDatabase.GetTipCalcTransactionsAsync());
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TipCalcTransactions"));

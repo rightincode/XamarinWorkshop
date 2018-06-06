@@ -159,7 +159,7 @@ namespace tipcalcapp.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalPerPersonTxt"));
         }
 
-        public async Task<int> SaveTipTransaction()
+        public async Task<int> SaveTipTransactionAsync()
         {
             _tipCalcTransaction.Id = 0;
             _tipCalcTransaction.GrandTotal = _calculator.GrandTotal;

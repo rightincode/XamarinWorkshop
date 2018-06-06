@@ -20,22 +20,22 @@ namespace tipcalcapp.tests
         }
 
         [TestMethod]
-        public async Task LoadViewModelHistory_ValidTipHistory_ListOfTipHistoryTransactions()
+        public async Task LoadViewModelHistory_ValidTipHistory_ListOfTipHistoryTransactionsAsync()
         {
             var myTipHistoryViewModel = new TipHistoryPageViewModel(myTipDatabase);
 
-            await myTipHistoryViewModel.LoadTipHistory();
+            await myTipHistoryViewModel.LoadTipHistoryAsync();
 
             Assert.IsNotNull(myTipHistoryViewModel.TipCalcTransactions);
             Assert.IsTrue(myTipHistoryViewModel.TipCalcTransactions.Count > 0);
         }
 
         [TestMethod]
-        public async Task LoadViewModelHistory_ValidTipHistory_ListOfTipHistoryTransactionsInDecendingOrderBySaved()
+        public async Task LoadViewModelHistory_ValidTipHistory_ListOfTipHistoryTransactionsInDecendingOrderBySavedAsync()
         {
             var myTipHistoryViewModel = new TipHistoryPageViewModel(myTipDatabase);
 
-            await myTipHistoryViewModel.LoadTipHistory();
+            await myTipHistoryViewModel.LoadTipHistoryAsync();
 
             Assert.AreEqual(2, myTipHistoryViewModel.TipCalcTransactions[0].Id);
         }

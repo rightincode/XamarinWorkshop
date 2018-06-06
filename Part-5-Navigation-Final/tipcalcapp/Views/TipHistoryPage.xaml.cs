@@ -20,7 +20,7 @@ namespace tipcalcapp.Views
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
             VM = new TipHistoryPageViewModel(_tipDatabase);
             BindingContext = VM;
-            VM.LoadTipHistory();
+            VM.LoadTipHistoryAsync();
         }
 	}
 }
