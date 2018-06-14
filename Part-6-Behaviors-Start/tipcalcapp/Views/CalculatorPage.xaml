@@ -26,9 +26,9 @@
                        WidthRequest="100" 
                        Keyboard="Numeric" 
                        Text="{Binding TipTxt, Mode=TwoWay}">
-                    <Entry.Behaviors>
+                    <!--<Entry.Behaviors>
                         <localBehaviors:NoTipBehavior />
-                    </Entry.Behaviors>
+                    </Entry.Behaviors>-->
                 </Entry>
             </StackLayout>            
             <StackLayout Orientation="Horizontal">
