@@ -1,4 +1,4 @@
-## SyntaxCon 2018 Xamarin Workshop
+## Intro to Xamarin Workshop
 
 The objective of this workshop is to teach you how to use Xamarin and Xamarin Forms to create cross platform solutions.  Here is a list of some of what you will learn:
 * Creating Cross Platform Applications Using Xamarin
@@ -10,6 +10,9 @@ The objective of this workshop is to teach you how to use Xamarin and Xamarin Fo
 * Effects
 * Custom Renderers
 * Local Databases
-
+* Visual Studio App Center - Mobile Backend as a Service (MBaaS)
+	* Authentication 
+	* Data Storage/Synchronization
+	* Push Notifications
 
 
