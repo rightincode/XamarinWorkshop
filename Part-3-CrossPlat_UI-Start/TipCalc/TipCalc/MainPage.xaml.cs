@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace TipCalc
 {
@@ -13,7 +10,8 @@ namespace TipCalc
 
 		public MainPage()
 		{
-			InitializeComponent();           
+			InitializeComponent();
+            On<iOS>().SetUseSafeArea(true);
 
             tipCalculator = new TipCalculator
             {
