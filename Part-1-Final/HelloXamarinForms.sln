@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinForms.Android", "HelloXamarinForms\HelloXamarinForms.Android\HelloXamarinForms.Android.csproj", "{DEB89987-A9A7-4060-B3DD-6EFC8B900AF5}"
 EndProject
@@ -219,8 +219,6 @@ Global
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.AppStore|x86.Build.0 = Release|x86
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.AppStore|x86.Deploy.0 = Release|x86
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|Any CPU.Build.0 = Debug|x86
-		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|ARM.ActiveCfg = Debug|ARM
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|ARM.Build.0 = Debug|ARM
 		{FEA21C1F-9551-4D9E-86E6-C46E86D02AE1}.Debug|ARM.Deploy.0 = Debug|ARM
