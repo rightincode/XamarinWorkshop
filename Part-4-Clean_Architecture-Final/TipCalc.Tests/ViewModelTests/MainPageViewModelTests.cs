@@ -1,9 +1,8 @@
-﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TipCalc.ViewModels;
 using TipCalc_core.Models;
 
-namespace TipCalc_viewmodels_tests
+namespace TipCalc.Tests.ViewModelTests
 {
     [TestClass]
     public class MainPageViewModelTests

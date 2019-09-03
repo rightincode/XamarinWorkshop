@@ -1,8 +1,7 @@
-﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TipCalc_core.Models;
 
-namespace TipCalc_core_tests
+namespace TipCalc_core.tests
 {
     [TestClass]
     public class TipCalculatorTests
