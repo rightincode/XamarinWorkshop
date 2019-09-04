@@ -23,7 +23,7 @@ namespace tipcalc.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
-            App.UiParent = new UIParent(this);          
+            //App.UiParent = new UIParent(this);          
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

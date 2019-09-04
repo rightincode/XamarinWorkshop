@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Client;
 using tipcalc.Interfaces;
-using tipcalc.Models;
+//using tipcalc.Models;
 using tipcalc_core.Interfaces;
 using tipcalc_core.Models;
 using tipcalc_data.Interfaces;
@@ -22,7 +22,7 @@ namespace tipcalc
         #region authentication
         public static IAuthenticate AuthenticationProvider { get; private set; }
 
-        public static UIParent UiParent = null;
+        //public static UIParent UiParent = null;
 
         #endregion
 
