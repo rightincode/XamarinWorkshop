@@ -15,7 +15,7 @@ namespace tipcalcapp.Views
         public MainPage()
         {
             InitializeComponent();
-            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            MasterPage.TipCalcProMenuItems.ItemSelected += ListView_ItemSelected;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -65,7 +65,7 @@ namespace tipcalcapp.Views
             Detail = new NavigationPage(page);
             IsPresented = false;
 
-            MasterPage.ListView.SelectedItem = null;
+            MasterPage.TipCalcProMenuItems.SelectedItem = null;
         }
     }
 }

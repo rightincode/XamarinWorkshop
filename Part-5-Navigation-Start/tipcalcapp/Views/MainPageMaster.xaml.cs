@@ -11,8 +11,8 @@ namespace tipcalcapp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPageMaster : ContentPage
     {
-        public Xamarin.Forms.ListView ListView;
-
+        public Xamarin.Forms.ListView TipCalcProMenuItems;
+        
         public MainPageMaster()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace tipcalcapp.Views
             //bool LoggedIn = (App.AuthenticationProvider.AuthClient.Users.Count() > 0) ? true : false;
             //BindingContext = new MainPageMasterViewModel(LoggedIn);
             BindingContext = new MainPageMasterViewModel(true);
-            ListView = MenuItemsListView;            
+            TipCalcProMenuItems = MenuItemsListView;            
         }        
     }
 }
