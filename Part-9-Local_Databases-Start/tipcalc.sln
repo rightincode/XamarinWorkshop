@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tipcalc.Android", "tipcalc\tipcalc.Android\tipcalc.Android.csproj", "{9919D588-B28B-4409-AC67-F15D47F43983}"
 EndProject
@@ -20,6 +20,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tipcalc_core", "tipcalc_core\tipcalc_core.csproj", "{E2921771-49B9-4D3B-AF74-8A6AF457D779}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tipcalc_core.tests", "tipcalc_core,tests\tipcalc_core.tests.csproj", "{14CCEE5E-DD3D-49F7-BDF4-47F4440565AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A167F65-51E5-4706-85E6-0EE39440D0C5}"
+	ProjectSection(SolutionItems) = preProject
+		Part - 9 Exercise.md = Part - 9 Exercise.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
