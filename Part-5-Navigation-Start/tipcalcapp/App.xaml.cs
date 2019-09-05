@@ -32,8 +32,8 @@ namespace tipcalc
             StartupConfiguration();
             //AuthenticationProvider = new AuthenticationProvider();
             
-            //MainPage = new NavigationPage(new MainPageNoNavigation());
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPageNoNavigation());
+            //MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
