@@ -26,11 +26,11 @@ namespace tipcalc.Models
 
         public PublicClientApplication AuthClient { get; set; }
 
-        public AuthenticationProvider()
-        {
-            AuthClient = new PublicClientApplication(ClientID, Authority);
-            AuthClient.RedirectUri = RedirectUri;
-        }
+        //public AuthenticationProvider()
+        //{
+        //    AuthClient = new PublicClientApplication(ClientID, Authority);
+        //    AuthClient.RedirectUri = RedirectUri;
+        //}
 
         public async Task<bool> LoginAsync(bool useSilent = false)
         {
@@ -39,26 +39,26 @@ namespace tipcalc.Models
             {
                 AuthenticationResult authenticationResult;
 
-                if (useSilent)
-                {
-                    authenticationResult = await AuthClient.AcquireTokenSilentAsync(
-                        Scopes,
-                        GetUserByPolicy(AuthClient.Users, SignUpAndInPolicy),
-                        Authority,
-                        false);
-                }
-                else
-                {
-                    authenticationResult = await AuthClient.AcquireTokenAsync(
-                        Scopes,
-                        GetUserByPolicy(AuthClient.Users, SignUpAndInPolicy),
-                        App.UiParent);
-                }
+                //if (useSilent)
+                //{
+                //    authenticationResult = await AuthClient.AcquireTokenSilentAsync(
+                //        Scopes,
+                //        GetUserByPolicy(AuthClient.Users, SignUpAndInPolicy),
+                //        Authority,
+                //        false);
+                //}
+                //else
+                //{
+                //    authenticationResult = await AuthClient.AcquireTokenAsync(
+                //        Scopes,
+                //        GetUserByPolicy(AuthClient.Users, SignUpAndInPolicy),
+                //        App.UiParent);
+                //}
 
-                if ((authenticationResult != null) && (!string.IsNullOrEmpty(authenticationResult.IdToken)))
-                {
-                    success = true;
-                }
+                //if ((authenticationResult != null) && (!string.IsNullOrEmpty(authenticationResult.IdToken)))
+                //{
+                //    success = true;
+                //}
                 
                 //if (User == null)
                 //{
@@ -103,10 +103,10 @@ namespace tipcalc.Models
                 //    success = true;
                 //}
 
-                foreach (var user in AuthClient.Users)
-                {
-                    AuthClient.Remove(user);
-                }
+                //foreach (var user in AuthClient.Users)
+                //{
+                //    AuthClient.Remove(user);
+                //}
                 
                 success = true;
             }
@@ -117,16 +117,16 @@ namespace tipcalc.Models
             return success;
         }
 
-        IUser GetUserByPolicy(IEnumerable<IUser> users, string policy)
-        {
-            foreach (var user in users)
-            {
-                string userId = Base64UrlDecode(user.Identifier.Split('.')[0]);
-                if (userId.EndsWith(policy.ToLower(), StringComparison.Ordinal))
-                    return user;
-            }
-            return null;
-        }
+        //IUser GetUserByPolicy(IEnumerable<IUser> users, string policy)
+        //{
+        //    foreach (var user in users)
+        //    {
+        //        string userId = Base64UrlDecode(user.Identifier.Split('.')[0]);
+        //        if (userId.EndsWith(policy.ToLower(), StringComparison.Ordinal))
+        //            return user;
+        //    }
+        //    return null;
+        //}
 
         string Base64UrlDecode(string str)
         {

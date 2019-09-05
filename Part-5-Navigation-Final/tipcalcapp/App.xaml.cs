@@ -22,7 +22,7 @@ namespace tipcalc
         #region authentication
         public static IAuthenticate AuthenticationProvider { get; private set; }
 
-        public static UIParent UiParent = null;
+        //public static UIParent UiParent = null;
 
         #endregion
 
